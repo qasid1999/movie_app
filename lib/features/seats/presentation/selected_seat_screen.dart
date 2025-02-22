@@ -41,7 +41,7 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
               SizedBox(
                 height: 60.h,
 
-                width: screenWidth*0.6,
+                width: screenWidth*0.55,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, RoutesPaths.seatsDetailsScreen);
@@ -57,7 +57,7 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   ),
                   child: Text(
-                    "Get Tickets",
+                    "Proceed to pay",
                     style:
                         context.titleSmall!.copyWith(color: context.onPrimaryColor),
                   ),
@@ -189,7 +189,28 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  height30,
+
+                  Container(
+                    height: 40.h,
+                    width: screenWidth*0.3,
+                    decoration: BoxDecoration(
+                      borderRadius: borderRoundness6,
+                      color: context.scaffoldBackgroundColor,
+
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("4/",style: context.headlineSmall,),
+                        Text("3 row", style: context.bodySmall!.copyWith(color: context.darkGrey),),
+
+
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
