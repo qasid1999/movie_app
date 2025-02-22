@@ -19,13 +19,28 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
           child: Row(
             children: [
               Container(
+                height: 60.h,
                 width: screenWidth*0.3,
                 decoration: BoxDecoration(
+                  borderRadius: borderRoundness6,
                   color: context.scaffoldBackgroundColor,
 
                 ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Total price",style: context.bodySmall,),
+                    Text("\$ 50", style: context.headlineSmall,),
+
+
+                  ],
+                ),
               ),
+              width10,
               SizedBox(
+                height: 60.h,
+
                 width: screenWidth*0.6,
                 child: ElevatedButton(
                   onPressed: () {
