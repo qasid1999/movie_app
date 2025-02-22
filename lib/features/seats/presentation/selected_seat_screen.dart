@@ -20,31 +20,34 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
             children: [
               Container(
                 height: 60.h,
-                width: screenWidth*0.3,
+                width: screenWidth * 0.3,
                 decoration: BoxDecoration(
                   borderRadius: borderRoundness6,
                   color: context.scaffoldBackgroundColor,
-
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Total price",style: context.bodySmall,),
-                    Text("\$ 50", style: context.headlineSmall,),
-
-
+                    Text(
+                      "Total price",
+                      style: context.bodySmall,
+                    ),
+                    Text(
+                      "\$ 50",
+                      style: context.headlineSmall,
+                    ),
                   ],
                 ),
               ),
               width10,
               SizedBox(
                 height: 60.h,
-
-                width: screenWidth*0.55,
+                width: screenWidth * 0.55,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, RoutesPaths.seatsDetailsScreen);
+                    Navigator.pushNamed(
+                        context, RoutesPaths.seatsDetailsScreen);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: context.skyBlue,
@@ -54,12 +57,13 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   ),
                   child: Text(
                     "Proceed to pay",
-                    style:
-                        context.titleSmall!.copyWith(color: context.onPrimaryColor),
+                    style: context.titleSmall!
+                        .copyWith(color: context.onPrimaryColor),
                   ),
                 ),
               ),
@@ -191,23 +195,29 @@ class _MovieListScreenState extends BaseStateful<SelectedSeatScreen> {
                     ),
                   ),
                   height30,
-
                   Container(
+                    padding: EdgeInsets.symmetric(horizontal: 6 .w),
                     height: 40.h,
-                    width: screenWidth*0.3,
+                    width: screenWidth * 0.3,
                     decoration: BoxDecoration(
                       borderRadius: borderRoundness6,
                       color: context.scaffoldBackgroundColor,
-
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("4/",style: context.headlineSmall,),
-                        Text("3 row", style: context.bodySmall!.copyWith(color: context.darkGrey),),
-
-
+                        Text(
+                          "4 / ",
+                          style: context.headlineSmall,
+                        ),
+                        Text(
+                          "3 row",
+                          style: context.bodySmall!
+                              .copyWith(color: context.darkGrey),
+                        ),
+                        Spacer(),
+                        Icon(Icons.close)
                       ],
                     ),
                   ),
